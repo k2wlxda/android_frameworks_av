@@ -4,8 +4,6 @@ LOCAL_PATH:= $(call my-dir)
 # libmediaplayerservice
 #
 
-LOCAL_CFLAGS += -fno-strict-aliasing
-
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES:=               \
@@ -64,6 +62,8 @@ ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
             $(TOP)/hardware/qcom/media/mm-core/inc
     endif
 endif
+
+LOCAL_CFLAGS += -fno-strict-aliasing
 
 LOCAL_MODULE:= libmediaplayerservice
 
