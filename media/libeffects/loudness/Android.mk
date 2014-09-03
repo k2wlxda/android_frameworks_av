@@ -3,6 +3,8 @@ LOCAL_PATH:= $(call my-dir)
 # LoudnessEnhancer library
 include $(CLEAR_VARS)
 
+LOCAL_CFLAGS += -fno-strict-aliasing
+
 LOCAL_SRC_FILES:= \
 	EffectLoudnessEnhancer.cpp \
 	dsp/core/dynamic_range_compression.cpp
