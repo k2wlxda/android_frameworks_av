@@ -2,8 +2,6 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_CFLAGS += -fno-strict-aliasing
-
 LOCAL_SRC_FILES:= \
     AudioParameter.cpp
 LOCAL_MODULE:= libmedia_helper
@@ -118,6 +116,8 @@ endif
 ifeq ($(BOARD_USE_KINETO_COMPATIBILITY),true)
     LOCAL_CFLAGS += -DUSE_KINETO_COMPATIBILITY
 endif
+
+LOCAL_CFLAGS += -fno-strict-aliasing
 
 LOCAL_MODULE:= libmedia
 
