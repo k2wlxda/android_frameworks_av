@@ -2,6 +2,8 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
+LOCAL_CFLAGS += -fno-strict-aliasing
+
 LOCAL_SRC_FILES:= \
     AudioParameter.cpp
 LOCAL_MODULE:= libmedia_helper
@@ -16,8 +18,6 @@ LOCAL_SRC_FILES:= AudioParameter.cpp
 LOCAL_MODULE:= libaudioparameter
 LOCAL_MODULE_TAGS := optional
 LOCAL_SHARED_LIBRARIES := libutils libcutils
-
-LOCAL_CFLAGS += -fno-strict-aliasing
 
 include $(BUILD_SHARED_LIBRARY)
 endif
