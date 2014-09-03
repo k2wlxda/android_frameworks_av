@@ -17,6 +17,8 @@ LOCAL_MODULE:= libaudioparameter
 LOCAL_MODULE_TAGS := optional
 LOCAL_SHARED_LIBRARIES := libutils libcutils
 
+LOCAL_CFLAGS += -fno-strict-aliasing
+
 include $(BUILD_SHARED_LIBRARY)
 endif
 
