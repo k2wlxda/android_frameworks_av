@@ -3,6 +3,8 @@ LOCAL_PATH:= $(call my-dir)
 # Multichannel downmix effect library
 include $(CLEAR_VARS)
 
+LOCAL_CFLAGS += -fno-strict-aliasing
+
 LOCAL_SRC_FILES:= \
 	EffectDownmix.c
 
@@ -26,7 +28,5 @@ LOCAL_C_INCLUDES := \
 LOCAL_PRELINK_MODULE := false
 
 LOCAL_CFLAGS += -fvisibility=hidden
-
-LOCAL_CFLAGS += -fno-strict-aliasing
 
 include $(BUILD_SHARED_LIBRARY)
