@@ -4,6 +4,8 @@ LOCAL_PATH:= $(call my-dir)
 # libmediaplayerservice
 #
 
+LOCAL_CFLAGS += -fno-strict-aliasing
+
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES:=               \
